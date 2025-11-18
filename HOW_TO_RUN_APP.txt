@@ -1,0 +1,205 @@
+================================================================================
+TWITTER TOXICITY DETECTION APP - QUICK START GUIDE
+================================================================================
+
+This guide will help you run the Twitter Toxicity Detection application.
+The app has two components: Streamlit UI (web interface) and FastAPI backend (API).
+
+================================================================================
+PREREQUISITES
+================================================================================
+
+1. Python 3.8 or higher installed
+2. All required packages installed (see requirements.txt)
+3. Model files exported from Colab:
+   - checkpoints/bert-base/best/pytorch_model.bin (recommended)
+   - OR checkpoints/bert-base/best/pytorch_model_quantized.bin (fallback)
+   - models/baseline_tfidf_logreg.joblib
+   - models/baseline_tfidf_vectorizer.joblib
+
+================================================================================
+INSTALL DEPENDENCIES (First Time Only)
+================================================================================
+
+Open PowerShell or Command Prompt in the Code_Trinity folder and run:
+
+    python -m pip install -r requirements.txt
+
+If you get errors, install packages individually:
+    python -m pip install streamlit fastapi uvicorn transformers torch scikit-learn pandas numpy
+
+================================================================================
+⚠️  IMPORTANT: YOU MUST BE IN THE Code_Trinity FOLDER ⚠️
+================================================================================
+
+Before running any commands, make sure you are in the Code_Trinity folder:
+
+    cd "C:\Users\ASUS\Desktop\Elective 4\Code_Trinity"
+
+Or navigate to the Code_Trinity folder using File Explorer, then right-click
+and select "Open in Terminal" or "Open PowerShell window here".
+
+================================================================================
+OPTION 1: RUN STREAMLIT UI (Web Interface)
+================================================================================
+
+METHOD A: Using Batch File (Easiest)
+-------------------------------------
+1. Navigate to Code_Trinity folder first:
+   cd "C:\Users\ASUS\Desktop\Elective 4\Code_Trinity"
+2. Double-click: run_app.bat
+   OR right-click run_app.bat and select "Run"
+3. The app will open in your default web browser at: http://localhost:8501
+4. If it doesn't open automatically, copy the URL from the terminal
+
+METHOD B: Using Command Line
+-----------------------------
+1. Open PowerShell or Command Prompt
+2. Navigate to Code_Trinity folder (REQUIRED):
+   cd "C:\Users\ASUS\Desktop\Elective 4\Code_Trinity"
+3. Verify you're in the right folder (you should see app\ folder):
+   dir app
+4. Run the command:
+   python -m streamlit run app/ui/app.py
+5. Open your browser and go to: http://localhost:8501
+
+STOPPING THE APP:
+- Press Ctrl+C in the terminal window
+- Or close the terminal window
+
+================================================================================
+OPTION 2: RUN FASTAPI BACKEND (API Server)
+================================================================================
+
+METHOD A: Using Batch File (Easiest)
+-------------------------------------
+1. Double-click: run_api.bat
+2. The API will be available at: http://localhost:8000
+3. API documentation at: http://localhost:8000/docs
+
+METHOD B: Using Command Line
+-----------------------------
+1. Open PowerShell or Command Prompt
+2. Navigate to Code_Trinity folder (REQUIRED):
+   cd "C:\Users\ASUS\Desktop\Elective 4\Code_Trinity"
+3. Verify you're in the right folder (you should see app\ folder):
+   dir app
+4. Run the command:
+   python -m uvicorn app.backend.main:app --host 0.0.0.0 --port 8000 --reload
+5. The API will be available at: http://localhost:8000
+
+STOPPING THE API:
+- Press Ctrl+C in the terminal window
+
+API ENDPOINTS:
+- POST /analyze - Analyze a single tweet
+  Example: curl -X POST "http://localhost:8000/analyze" -H "Content-Type: application/json" -d "{\"text\": \"Your tweet here\"}"
+- GET /health - Check API health
+- GET /docs - Interactive API documentation
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+PROBLEM: "streamlit is not recognized"
+SOLUTION: Use "python -m streamlit run app/ui/app.py" instead of "streamlit run"
+
+PROBLEM: "pip is not recognized"
+SOLUTION: Use "python -m pip install" instead of "pip install"
+
+PROBLEM: "File does not exist: app\ui\app.py" or "ModuleNotFoundError: No module named 'app'"
+SOLUTION: 
+- You are NOT in the Code_Trinity folder!
+- Navigate to Code_Trinity folder first:
+  cd "C:\Users\ASUS\Desktop\Elective 4\Code_Trinity"
+- Verify with: dir app (should show app folder contents)
+- Then run the command again
+
+PROBLEM: "Model not found" or "Using baseline model"
+SOLUTION: 
+- Check that pytorch_model.bin exists in: checkpoints/bert-base/best/
+- If missing, export it from Colab notebook
+- The app will still work with baseline model, but accuracy may be lower
+
+PROBLEM: "All predictions are neutral"
+SOLUTION:
+- Make sure pytorch_model.bin is present (not just quantized version)
+- Click "Reload Model" button in the Streamlit sidebar
+- The predictor has been updated to reduce neutral bias
+
+PROBLEM: Port already in use
+SOLUTION:
+- Streamlit: Change port with --server.port 8502
+- FastAPI: Change port with --port 8001
+
+PROBLEM: App crashes on startup
+SOLUTION:
+- Check that all model files are present
+- Verify Python version (3.8+)
+- Reinstall dependencies: python -m pip install -r requirements.txt --upgrade
+
+================================================================================
+QUICK TEST
+================================================================================
+
+After starting the Streamlit app, try these sample tweets:
+
+POSITIVE:
+"So grateful for all the support today! Amazing community, thank you everyone!"
+
+NEGATIVE/TOXIC:
+"This is absolutely disgusting! People like you should be banned from social media."
+
+NEUTRAL:
+"Just finished my morning coffee. Weather is okay today, nothing special."
+
+================================================================================
+FILE STRUCTURE
+================================================================================
+
+Code_Trinity/
+├── app/
+│   ├── ui/
+│   │   └── app.py          (Streamlit UI)
+│   ├── backend/
+│   │   └── main.py         (FastAPI backend)
+│   └── inference/
+│       └── predictor.py    (Model prediction logic)
+├── checkpoints/
+│   └── bert-base/
+│       └── best/
+│           ├── pytorch_model.bin          (Full BERT model - recommended)
+│           ├── pytorch_model_quantized.bin (Quantized model - fallback)
+│           ├── config.json
+│           └── tokenizer files
+├── models/
+│   ├── baseline_tfidf_logreg.joblib
+│   └── baseline_tfidf_vectorizer.joblib
+├── run_app.bat             (Start Streamlit UI)
+├── run_api.bat             (Start FastAPI backend)
+└── requirements.txt        (Python dependencies)
+
+================================================================================
+NOTES
+================================================================================
+
+- The app will automatically use BERT model if pytorch_model.bin is available
+- If BERT model is missing, it falls back to baseline TF-IDF + Logistic Regression
+- Both models have been updated to reduce neutral bias
+- The app supports single tweet analysis and batch CSV upload
+- Model status is shown in the Streamlit sidebar
+
+================================================================================
+SUPPORT
+================================================================================
+
+If you encounter issues:
+1. Check that all files are in the correct locations
+2. Verify Python and package versions
+3. Check the terminal/console for error messages
+4. Ensure model files are exported from Colab
+
+================================================================================
+END OF GUIDE
+================================================================================
+

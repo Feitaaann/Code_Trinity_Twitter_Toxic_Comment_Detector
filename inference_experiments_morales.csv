@@ -1,0 +1,21 @@
+Tweet,True_Label,True_Label_Name,Predicted_Label,Predicted_Label_Name,Confidence,Correct
+Incredible work! You all did an amazing job!,1,Positive,1,Positive,0.7708,Correct
+Inspiring story! Thank you for sharing this!,1,Positive,1,Positive,0.9085,Correct
+So grateful for all the support today! Thank you everyone!,1,Positive,1,Positive,0.7071,Correct
+Just finished my morning coffee. Weather is okay today.,0,Neutral,0,Neutral,0.7766,Correct
+Spectacular event! Had an absolutely wonderful time!,1,Positive,1,Positive,0.7249,Correct
+Checked my emails. Nothing urgent came through.,0,Neutral,1,Positive,0.6924,Incorrect
+Disgusting behavior. You should know better.,-1,Toxic,0,Neutral,0.4152,Incorrect
+Ridiculous! This is completely unacceptable.,-1,Toxic,0,Neutral,0.6907,Incorrect
+So proud of everyone! This is truly special!,1,Positive,-1,Toxic,0.4582,Incorrect
+Went for a walk in the park. It was peaceful.,0,Neutral,0,Neutral,0.7141,Correct
+Planning to go shopping later. Need a few things.,0,Neutral,0,Neutral,0.6676,Correct
+Love this! Such a positive and uplifting experience!,1,Positive,1,Positive,0.9456,Correct
+Outstanding achievement! Congratulations to all involved!,1,Positive,1,Positive,0.8852,Correct
+Updated my schedule. All tasks are on track.,0,Neutral,0,Neutral,0.7769,Correct
+Wonderful community! So grateful to be part of this!,1,Positive,0,Neutral,0.4542,Incorrect
+The weather is moderate today. Not too hot or cold.,0,Neutral,0,Neutral,0.9406,Correct
+This is absolutely disgusting! People like you should be banned.,-1,Toxic,-1,Toxic,0.8127,Correct
+Watched a documentary last night. It was informative.,0,Neutral,-1,Toxic,0.465,Incorrect
+Working on my assignment. Making good progress.,0,Neutral,0,Neutral,0.9258,Correct
+This made my day! Best news ever! So excited!,1,Positive,1,Positive,0.6671,Correct
