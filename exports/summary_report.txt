@@ -1,0 +1,32 @@
+
+Twitter Toxicity Detection Project - Summary Report
+==================================================
+
+Dataset: mteb/tweet_sentiment_extraction
+Total samples: 29756
+Train/Val/Test split: 70%/15%/15%
+
+Baseline Model (TF-IDF + Logistic Regression):
+  - Accuracy: 0.6224
+  - Precision: 0.6294
+  - Recall: 0.6197
+  - F1-macro: 0.6234
+
+BERT Model (bert-base-uncased):
+  - Accuracy: 0.6593
+  - Precision: 0.6721
+  - Recall: 0.6562
+  - F1-macro: 0.6617
+
+Improvement over baseline:
+  - F1-macro improvement: 6.14%
+
+Target F1-macro (per proposal): >0.85
+Achieved F1-macro: 0.6617
+Target met: ✗ NO
+
+All artifacts exported to:
+  - Model checkpoints: ./checkpoints/bert-base/best
+  - Predictions: exports/
+  - Visualizations: exports/confusion_matrices/, exports/roc_curves/
+  - Logs: runs_log.csv, exports/experiment_runs_all.csv

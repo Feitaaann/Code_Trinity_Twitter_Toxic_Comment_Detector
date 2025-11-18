@@ -1,0 +1,23 @@
+{
+  "model_name": "bert-base-uncased",
+  "task": "Toxic Comment Detection on Twitter",
+  "num_labels": 3,
+  "labels": [
+    "negative/toxic (-1)",
+    "neutral (0)",
+    "positive (1)"
+  ],
+  "dataset": "mteb/tweet_sentiment_extraction",
+  "training_split": "70%",
+  "validation_split": "15%",
+  "test_split": "15%",
+  "max_sequence_length": 128,
+  "optimizer": "AdamW",
+  "loss": "Cross-entropy",
+  "scheduler": "Linear warmup",
+  "best_test_accuracy": 0.6592940125111707,
+  "best_test_f1_macro": 0.6616507321288783,
+  "baseline_accuracy": 0.6224307417336908,
+  "baseline_f1_macro": 0.6233782959331148,
+  "improvement": "6.14%"
+}

@@ -1,0 +1,31 @@
+Tweet,True_Label,True_Label_Name,Predicted_Label,Predicted_Label_Name,Confidence,Correct
+Brilliant idea! This will make a huge difference!,1,Positive,0,Neutral,0.4973,Incorrect
+You should be ashamed of yourself for posting this.,-1,Toxic,-1,Toxic,0.879,Correct
+This is absolutely disgusting! People like you should be banned.,-1,Toxic,-1,Toxic,0.764,Correct
+The meeting went as expected. We discussed next steps.,0,Neutral,0,Neutral,0.7532,Correct
+Just finished my morning coffee. Weather is okay today.,0,Neutral,0,Neutral,0.663,Correct
+Rude and unnecessary. Keep your opinions to yourself.,-1,Toxic,-1,Toxic,0.6874,Correct
+This is offensive and wrong on so many levels.,-1,Toxic,0,Neutral,0.5656,Incorrect
+Ridiculous! This is completely unacceptable.,-1,Toxic,1,Positive,0.5732,Incorrect
+Fantastic results! Everything exceeded our expectations!,1,Positive,-1,Toxic,0.6314,Incorrect
+This makes me sick. People like you are the problem.,-1,Toxic,0,Neutral,0.6566,Incorrect
+Went for a walk in the park. It was peaceful.,0,Neutral,1,Positive,0.5334,Incorrect
+What a waste of space. You contribute nothing to society.,-1,Toxic,-1,Toxic,0.7594,Correct
+Spectacular event! Had an absolutely wonderful time!,1,Positive,1,Positive,0.7129,Correct
+Love this! Such a positive and uplifting experience!,1,Positive,1,Positive,0.931,Correct
+So proud of everyone! This is truly special!,1,Positive,1,Positive,0.8327,Correct
+Perfect outcome! Couldn't be happier with the results!,1,Positive,1,Positive,0.8687,Correct
+Looking forward to the weekend. Nothing special planned yet.,0,Neutral,0,Neutral,0.7638,Correct
+Had lunch at the usual place. Food was decent.,0,Neutral,-1,Toxic,0.6554,Incorrect
+You're such an idiot! How can you be so stupid?,-1,Toxic,0,Neutral,0.4687,Incorrect
+Beautiful day! Feeling blessed and grateful!,1,Positive,1,Positive,0.7446,Correct
+So grateful for all the support today! Thank you everyone!,1,Positive,1,Positive,0.7133,Correct
+Planning to go shopping later. Need a few things.,0,Neutral,1,Positive,0.5138,Incorrect
+Working on my assignment. Making good progress.,0,Neutral,0,Neutral,0.9154,Correct
+Attended a seminar this morning. Learned some new things.,0,Neutral,0,Neutral,0.6929,Correct
+This is harmful and you should delete it.,-1,Toxic,-1,Toxic,0.8735,Correct
+Updated my schedule. All tasks are on track.,0,Neutral,0,Neutral,0.8741,Correct
+Outstanding achievement! Congratulations to all involved!,1,Positive,1,Positive,0.8251,Correct
+Excellent performance! You deserve all the recognition!,1,Positive,1,Positive,0.9492,Correct
+Checked my emails. Nothing urgent came through.,0,Neutral,0,Neutral,0.7981,Correct
+Amazing day! Everything went perfectly and I'm so happy!,1,Positive,-1,Toxic,0.4535,Incorrect

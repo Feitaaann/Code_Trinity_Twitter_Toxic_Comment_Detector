@@ -1,0 +1,26 @@
+Tweet,True_Label,True_Label_Name,Predicted_Label,Predicted_Label_Name,Confidence,Correct
+You're completely wrong and being ignorant.,-1,Toxic,-1,Toxic,0.6819,Correct
+Perfect outcome! Couldn't be happier with the results!,1,Positive,1,Positive,0.9025,Correct
+Went for a walk in the park. It was peaceful.,0,Neutral,0,Neutral,0.7097,Correct
+Excellent performance! You deserve all the recognition!,1,Positive,1,Positive,0.6985,Correct
+You're terrible at this. Just give up already.,-1,Toxic,0,Neutral,0.5797,Incorrect
+Finished the project on time. Everything went smoothly.,0,Neutral,0,Neutral,0.6836,Correct
+Outstanding achievement! Congratulations to all involved!,1,Positive,1,Positive,0.9456,Correct
+Updated my schedule. All tasks are on track.,0,Neutral,-1,Toxic,0.4674,Incorrect
+Wonderful community! So grateful to be part of this!,1,Positive,-1,Toxic,0.43,Incorrect
+Looking forward to the weekend. Nothing special planned yet.,0,Neutral,0,Neutral,0.6708,Correct
+You're such an idiot! How can you be so stupid?,-1,Toxic,0,Neutral,0.4385,Incorrect
+You should be ashamed of yourself for posting this.,-1,Toxic,-1,Toxic,0.8149,Correct
+The meeting went as expected. We discussed next steps.,0,Neutral,0,Neutral,0.9117,Correct
+Watched a documentary last night. It was informative.,0,Neutral,0,Neutral,0.7135,Correct
+Horrible! This is the worst thing I've ever seen.,-1,Toxic,-1,Toxic,0.869,Correct
+Awful! How can anyone think this is okay?,-1,Toxic,-1,Toxic,0.7435,Correct
+This is harmful and you should delete it.,-1,Toxic,1,Positive,0.5314,Incorrect
+This makes me sick. People like you are the problem.,-1,Toxic,-1,Toxic,0.6863,Correct
+Rude and unnecessary. Keep your opinions to yourself.,-1,Toxic,-1,Toxic,0.7514,Correct
+Fantastic results! Everything exceeded our expectations!,1,Positive,1,Positive,0.719,Correct
+The weather is moderate today. Not too hot or cold.,0,Neutral,0,Neutral,0.6713,Correct
+Beautiful day! Feeling blessed and grateful!,1,Positive,1,Positive,0.7187,Correct
+This is offensive and wrong on so many levels.,-1,Toxic,1,Positive,0.4213,Incorrect
+Love this! Such a positive and uplifting experience!,1,Positive,1,Positive,0.8507,Correct
+Spectacular event! Had an absolutely wonderful time!,1,Positive,1,Positive,0.6897,Correct
