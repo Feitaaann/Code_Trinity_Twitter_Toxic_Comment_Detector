@@ -42,12 +42,9 @@ ENV/
 Thumbs.db
 desktop.ini
 
-# Model files (large - exclude from git to avoid timeout)
-*.bin
-*.joblib
-checkpoints/
-models/
-exports/pytorch_model.bin
+# Model files - using Git LFS for large files
+# *.bin files will be tracked with Git LFS
+# checkpoints/ and models/ folders will use LFS
 
 # Data files (optional - uncomment if datasets are too large)
 # *.csv
