@@ -113,3 +113,11 @@ See `requirements.txt` for full list. Key dependencies:
 - Dataset must be exported first using `export_dataset.py`
 - GPU recommended for BERT training but CPU will work (slower)
 
+## Model Files
+
+Large model files (`.bin` files >100MB) are excluded from this repository due to GitHub's file size limits. To use the trained models:
+
+1. **Regenerate from notebook**: Run `Code_Trinity_Final_Project.ipynb` to train and save models
+2. **Download separately**: Model checkpoints can be provided separately if needed
+3. **Location**: Models are saved to `checkpoints/bert-base/best/` after training
+

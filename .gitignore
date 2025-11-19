@@ -42,9 +42,12 @@ ENV/
 Thumbs.db
 desktop.ini
 
-# Model files - using Git LFS for large files
-# *.bin files will be tracked with Git LFS
-# checkpoints/ and models/ folders will use LFS
+# Model files (too large for GitHub - exclude from repository)
+# Models can be regenerated from the notebook or downloaded separately
+*.bin
+checkpoints/
+models/
+exports/pytorch_model.bin
 
 # Data files (optional - uncomment if datasets are too large)
 # *.csv
