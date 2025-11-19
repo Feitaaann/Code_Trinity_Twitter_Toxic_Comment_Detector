@@ -44,10 +44,11 @@ desktop.ini
 
 # Model files (too large for GitHub - exclude from repository)
 # Models can be regenerated from the notebook or downloaded separately
-*.bin
-checkpoints/
+# Note: Large .bin files are handled by Git LFS (see .gitattributes)
+# *.bin  # Commented out - using Git LFS instead
+# checkpoints/  # Commented out - using Git LFS for large files
 models/
-exports/pytorch_model.bin
+# exports/pytorch_model.bin  # Commented out - using Git LFS instead
 
 # Data files (optional - uncomment if datasets are too large)
 # *.csv
